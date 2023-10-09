@@ -38,6 +38,14 @@ header h1 {
     border-radius: 50%;
 }
 
+/* ... (previous styles) ... */
+
+.project img {
+    max-width: 100%; /* Adjust the image size to fit the container */
+    border-radius: 5px;
+}
+
+
 .projects {
     display: flex;
     flex-wrap: wrap;
@@ -54,6 +62,7 @@ header h1 {
     max-width: 300px;
     transition: transform 0.2s; /* Added transition for hover effect */
     text-align: center; /* Center-align project content */
+    position: relative; /* Enable absolute positioning */
 }
 
 .project:hover {
@@ -61,17 +70,16 @@ header h1 {
 }
 
 .project-link {
+    position: absolute; /* Absolute positioning for the button */
+    bottom: 10px; /* Distance from the bottom of the card */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
     display: inline-block;
     padding: 10px 20px;
     background: linear-gradient(to right, #000, #000); /* Black Gradient */
     color: #fff;
     border-radius: 5px;
-    margin-top: 10px; /* Space from the project description */
 }
 
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-}
+
+
